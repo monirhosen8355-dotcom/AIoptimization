@@ -89,14 +89,14 @@ function displayTools(tools) {
             <p>${tool.desc}</p>
             <div class="card-footer">
                 <span class="badge">${tool.category}</span>
-                <button 
-class="btn-primary visit-btn" 
-data-link="${tool.link}"
-style="padding: 6px 15px; font-size: 0.8rem;">
+             <a href="${tool.link}" 
+   target="_blank" 
+   class="btn-primary"
+   style="padding: 6px 15px; font-size: 0.8rem; text-decoration: none;">
 
-Visit Site
+   Visit Site
 
-</button>
+</a>
             </div>
         `;
         toolsGrid.appendChild(card);
@@ -153,24 +153,3 @@ const subscribeBtn = document.getElementById("subscribeBtn");
 subscribeBtn.onclick = () => {
     window.open("https://youtube.com/@monirtechspot", "_blank");
 };
-// Visit button ads system
-
-document.addEventListener("click", function(e){
-
-    if(e.target.classList.contains("visit-btn")){
-
-        const realLink = e.target.dataset.link;
-
-        // Ad open first
-        window.open("YOUR_AD_LINK", "_blank");
-
-        // After 10 seconds open real website
-        setTimeout(() => {
-
-            window.open(realLink, "_blank");
-
-        }, 10000);
-
-    }
-
-});
