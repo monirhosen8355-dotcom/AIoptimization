@@ -457,3 +457,41 @@ footer{
     background: #6366f1;
     transform: translateY(-3px);
 }
+@media(max-width:768px){
+
+.footer-grid{
+    grid-template-columns:1fr;
+    gap:35px;
+}
+
+.footer-info,
+.footer-links,
+.footer-newsletter{
+    text-align:left;
+}
+
+.payment-methods{
+    justify-content:flex-start;
+}
+
+.newsletter-form{
+    display:flex;
+    gap:10px;
+}
+
+.newsletter-form input{
+    width:100%;
+}
+
+.footer-bottom{
+    padding:30px 20px;
+}
+
+.dev-link{
+    font-size:1.2rem;
+}
+
+.footer-badges{
+    gap:12px;
+}
+}
