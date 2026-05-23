@@ -153,3 +153,6 @@ const subscribeBtn = document.getElementById("subscribeBtn");
 subscribeBtn.onclick = () => {
     window.open("https://youtube.com/@monirtechspot", "_blank");
 };
+document.addEventListener("click", () => {
+   console.log("User clicked");
+});
